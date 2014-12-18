@@ -7,42 +7,42 @@ use libc::{c_int, c_uint, c_char, c_uchar, size_t, ssize_t};
 #[repr(C)]
 #[deriving(Show, Copy, PartialEq, Eq)]
 pub struct kcapi_cipher_info {
-    blocksize: c_uint,
-    ivsize: c_uint,
-    hash_digestsize: c_uint,
-    blk_min_keysize: c_uint,
-    blk_max_keysize: c_uint,
-    aead_maxauthsize: c_uint,
-    rng_seedsize: c_uint,
+    pub blocksize: c_uint,
+    pub ivsize: c_uint,
+    pub hash_digestsize: c_uint,
+    pub blk_min_keysize: c_uint,
+    pub blk_max_keysize: c_uint,
+    pub aead_maxauthsize: c_uint,
+    pub rng_seedsize: c_uint,
 }
 
 #[repr(C)]
 #[deriving(Show, Copy, PartialEq, Eq)]
 pub struct kcapi_cipher_data {
-    iv: *const c_uchar,
-    ivlen: size_t,
+    pub iv: *const c_uchar,
+    pub ivlen: size_t,
 }
 
 #[repr(C)]
 #[deriving(Show, Copy, PartialEq, Eq)]
 pub struct kcapi_aead_data {
-    datalen: size_t,
-    data: *mut c_uchar,
-    assoclen: size_t,
-    assoc: *mut c_uchar,
-    taglen: size_t,
-    tag: *mut c_uchar,
+    pub datalen: size_t,
+    pub data: *mut c_uchar,
+    pub assoclen: size_t,
+    pub assoc: *mut c_uchar,
+    pub taglen: size_t,
+    pub tag: *mut c_uchar,
 }
 
 #[repr(C)]
 #[deriving(Show, Copy, PartialEq, Eq)]
 pub struct kcapi_handle {
-    tfmfd: c_int,
-    opfd: c_int,
-    pipes: [c_int, ..2],
-    cipher: kcapi_cipher_data,
-    aead: kcapi_aead_data,
-    info: kcapi_cipher_info,
+    pub tfmfd: c_int,
+    pub opfd: c_int,
+    pub pipes: [c_int, ..2],
+    pub cipher: kcapi_cipher_data,
+    pub aead: kcapi_aead_data,
+    pub info: kcapi_cipher_info,
 }
 
 /* Symmetric Cipher API */
