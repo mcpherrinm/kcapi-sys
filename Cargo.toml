@@ -1,10 +1,12 @@
 [package]
 
 name = "kcapi-sys"
-version = "0.0.1"
+version = "0.0.2"
 authors = ["Matt McPherrin <git@mcpherrin.ca>"]
 description = "Rust FFI bindings for libkcapi, the kernel crypto api library."
 license="BSD-3-Clause"
 links="kcapi"
 
 build="src/build.rs"
+repository="https://github.com/mcpherrinm/kcapi-sys.git"
+homepage="https://github.com/mcpherrinm/kcapi-sys"

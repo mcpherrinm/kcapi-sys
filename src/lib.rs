@@ -11,6 +11,7 @@ pub struct kcapi_cipher_info {
     ivsize: c_uint,
     hash_digestsize: c_uint,
     blk_min_keysize: c_uint,
+    blk_max_keysize: c_uint,
     aead_maxauthsize: c_uint,
     rng_seedsize: c_uint,
 }
